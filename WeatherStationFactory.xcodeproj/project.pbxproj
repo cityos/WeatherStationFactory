@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		B306E2291CA2D01E001634ED /* WeatherStationFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = B306E2281CA2D01E001634ED /* WeatherStationFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B306E2311CA2F309001634ED /* WeatherStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306E2301CA2F309001634ED /* WeatherStation.swift */; };
+		B306E2331CA2F31D001634ED /* CoreCityOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B306E2321CA2F31D001634ED /* CoreCityOS.framework */; };
+		B306E2361CA2F3D9001634ED /* WeatherStationDataCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306E2351CA2F3D9001634ED /* WeatherStationDataCollection.swift */; };
+		B306E2381CA2F5A9001634ED /* WeatherStationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306E2371CA2F5A9001634ED /* WeatherStationFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B306E2251CA2D01E001634ED /* WeatherStationFactory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeatherStationFactory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B306E2281CA2D01E001634ED /* WeatherStationFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherStationFactory.h; sourceTree = "<group>"; };
 		B306E22A1CA2D01E001634ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B306E2301CA2F309001634ED /* WeatherStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherStation.swift; sourceTree = "<group>"; };
+		B306E2321CA2F31D001634ED /* CoreCityOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreCityOS.framework; path = Carthage/Build/iOS/CoreCityOS.framework; sourceTree = "<group>"; };
+		B306E2351CA2F3D9001634ED /* WeatherStationDataCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherStationDataCollection.swift; sourceTree = "<group>"; };
+		B306E2371CA2F5A9001634ED /* WeatherStationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherStationFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B306E2331CA2F31D001634ED /* CoreCityOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -30,6 +39,7 @@
 		B306E21B1CA2D01E001634ED = {
 			isa = PBXGroup;
 			children = (
+				B306E2321CA2F31D001634ED /* CoreCityOS.framework */,
 				B306E2271CA2D01E001634ED /* WeatherStationFactory */,
 				B306E2261CA2D01E001634ED /* Products */,
 			);
@@ -46,10 +56,21 @@
 		B306E2271CA2D01E001634ED /* WeatherStationFactory */ = {
 			isa = PBXGroup;
 			children = (
+				B306E2301CA2F309001634ED /* WeatherStation.swift */,
+				B306E2351CA2F3D9001634ED /* WeatherStationDataCollection.swift */,
+				B306E2371CA2F5A9001634ED /* WeatherStationFactory.swift */,
+				B306E2341CA2F326001634ED /* Additional */,
+			);
+			path = WeatherStationFactory;
+			sourceTree = "<group>";
+		};
+		B306E2341CA2F326001634ED /* Additional */ = {
+			isa = PBXGroup;
+			children = (
 				B306E2281CA2D01E001634ED /* WeatherStationFactory.h */,
 				B306E22A1CA2D01E001634ED /* Info.plist */,
 			);
-			path = WeatherStationFactory;
+			name = Additional;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B306E2311CA2F309001634ED /* WeatherStation.swift in Sources */,
+				B306E2381CA2F5A9001634ED /* WeatherStationFactory.swift in Sources */,
+				B306E2361CA2F3D9001634ED /* WeatherStationDataCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,26 +254,37 @@
 		B306E22E1CA2D01E001634ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WeatherStationFactory/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.cityOS.WeatherStationFactory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B306E22F1CA2D01E001634ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WeatherStationFactory/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

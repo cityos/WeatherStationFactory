@@ -11,4 +11,13 @@ import CoreCityOS
 public final class WeatherFactory: FactoryType {
     
     public static var sharedInstance: WeatherFactory = WeatherFactory()
+    
+    public func getLatestData(completion: (data: LiveDataCollectionType?, error: ErrorType) -> ()) {
+        
+        Backend.requestLatestData {
+            data, error in
+            print(data)
+            print(error)
+        }
+    }
 }

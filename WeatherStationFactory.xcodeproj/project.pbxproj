@@ -12,6 +12,7 @@
 		B306E2331CA2F31D001634ED /* CoreCityOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B306E2321CA2F31D001634ED /* CoreCityOS.framework */; };
 		B306E2361CA2F3D9001634ED /* WeatherStationDataCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306E2351CA2F3D9001634ED /* WeatherStationDataCollection.swift */; };
 		B306E2381CA2F5A9001634ED /* WeatherStationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306E2371CA2F5A9001634ED /* WeatherStationFactory.swift */; };
+		B37659191CA4134400709AE4 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37659181CA4134400709AE4 /* Backend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B306E2321CA2F31D001634ED /* CoreCityOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreCityOS.framework; path = Carthage/Build/iOS/CoreCityOS.framework; sourceTree = "<group>"; };
 		B306E2351CA2F3D9001634ED /* WeatherStationDataCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherStationDataCollection.swift; sourceTree = "<group>"; };
 		B306E2371CA2F5A9001634ED /* WeatherStationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherStationFactory.swift; sourceTree = "<group>"; };
+		B37659181CA4134400709AE4 /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				B306E2351CA2F3D9001634ED /* WeatherStationDataCollection.swift */,
 				B306E2371CA2F5A9001634ED /* WeatherStationFactory.swift */,
 				B306E2341CA2F326001634ED /* Additional */,
+				B37659181CA4134400709AE4 /* Backend.swift */,
 			);
 			path = WeatherStationFactory;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37659191CA4134400709AE4 /* Backend.swift in Sources */,
 				B306E2311CA2F309001634ED /* WeatherStation.swift in Sources */,
 				B306E2381CA2F5A9001634ED /* WeatherStationFactory.swift in Sources */,
 				B306E2361CA2F3D9001634ED /* WeatherStationDataCollection.swift in Sources */,
@@ -313,6 +317,7 @@
 				B306E22F1CA2D01E001634ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

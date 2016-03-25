@@ -12,12 +12,27 @@ public final class WeatherFactory: FactoryType {
     
     public static var sharedInstance: WeatherFactory = WeatherFactory()
     
-    public func getLatestData(completion: (data: LiveDataCollectionType?, error: ErrorType) -> ()) {
-        
+    /// Requests latest data from backend server
+    public func getLatestData(completion: (data: DeviceType?, error: ErrorType?) -> ()) {
         Backend.requestLatestData {
             data, error in
-            print(data)
-            print(error)
+            if error == nil {
+                if let data = data {
+                    let weatherStationDevice = WeatherStation(deviceID: data["id"] as! String)
+                    
+                    let temperature = data["temperature"] as! Double
+                    let humidity = data["humidity"] as! Double
+                    let pm10 = data["pm10"] as! Double
+                    
+                    weatherStationDevice.dataCollection[.Temperature]?.addDataPoint(DataPoint(value: temperature))
+                    weatherStationDevice.dataCollection[.Humidity]?.addDataPoint(DataPoint(value: humidity))
+                    weatherStationDevice.dataCollection[.ParticleMatter10]?.addDataPoint(DataPoint(value: pm10))
+                    print(weatherStationDevice.dataCollection.allReadings)
+                    completion(data: weatherStationDevice, error: nil)
+                }
+            } else {
+                completion(data: nil, error: error)
+            }
         }
     }
 }

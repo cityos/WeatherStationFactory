@@ -19,5 +19,4 @@ public class WeatherStation: DeviceType {
         self.location = location
         self.dataCollection = WeatherStationDataCollection(deviceID: deviceID)
     }
-    
 }

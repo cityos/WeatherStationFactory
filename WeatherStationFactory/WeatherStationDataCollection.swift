@@ -29,12 +29,21 @@ public class WeatherStationDataCollection: LiveDataCollectionType {
         )
     }
     
+    public var pm10: LiveDataType {
+        return LiveData(
+            dataType: .ParticleMatter10,
+            jsonKey: "pm",
+            unitNotation: "ug"
+        )
+    }
+    
     public init(deviceID: String) {
         self.creationDate = NSDate()
         self.deviceData = DeviceData(deviceID: deviceID)
         self.allReadings = [
             temperature,
-            humidity
+            humidity,
+            pm10
         ]
     }
 }

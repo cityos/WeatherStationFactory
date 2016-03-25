@@ -58,11 +58,11 @@
 		B306E2271CA2D01E001634ED /* WeatherStationFactory */ = {
 			isa = PBXGroup;
 			children = (
+				B37659181CA4134400709AE4 /* Backend.swift */,
 				B306E2301CA2F309001634ED /* WeatherStation.swift */,
 				B306E2351CA2F3D9001634ED /* WeatherStationDataCollection.swift */,
 				B306E2371CA2F5A9001634ED /* WeatherStationFactory.swift */,
 				B306E2341CA2F326001634ED /* Additional */,
-				B37659181CA4134400709AE4 /* Backend.swift */,
 			);
 			path = WeatherStationFactory;
 			sourceTree = "<group>";

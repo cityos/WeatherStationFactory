@@ -12,7 +12,7 @@ public class Backend {
 
    public class func requestLatestData(completion: (data: Dictionary<String, AnyObject>?, error: ErrorType?) -> ()) {
         let session = NSURLSession.sharedSession()
-        let token = "GpXWXBrhxMrBfxmf1bfhqm1sbMLG"
+        let token = "A2E2gEfWw4pxKeBiYxmaPIuInylS"
         
         let address = "https://api.flowthings.io/v0.1/ceco/drop/f56f445be5bb70953a92d1379?limit=1&hints=0"
         let escapedAddress = address.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
